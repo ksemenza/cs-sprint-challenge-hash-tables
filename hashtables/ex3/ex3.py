@@ -5,8 +5,10 @@ def intersection(arrays):
 
     count = 0
     lst = []
+    # get the inner array from the 2D array passed in
     for i in arrays:
         if isinstance(i, list):
+              # if i in the cache increment
             ar1 = Counter(i)
             count += 1
             lst.append(ar1)
@@ -17,10 +19,15 @@ def intersection(arrays):
     for i in lst:
         arr += i
 
+#for each item
+#if equals count in arrays
+#append results to i
     for (key, value) in arr.items():
         if value == count:
             result.append(key)
 
+    # if we get here, the array is set,
+    # return it
     return result
 
 
