@@ -8,7 +8,8 @@ def has_negatives(a):
     for num in a:
         # if the num has a corresponding number in the dict
         if storage.get(
-                abs(num)):  # The abs() function is used to return the absolute value of a number.get method returns the value for the given key
+                abs(num)):  # The abs() function is used to return the absolute value of a number
+            #get method returns the value for the given key
             # check if they add to 0
             if (storage.get(abs(num)) + num) == 0:
                 # if it does, add to match list
