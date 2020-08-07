@@ -1,8 +1,25 @@
+from collections import Counter
+
+
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+
+    count = 0
+    lst = []
+    for i in arrays:
+        if isinstance(i, list):
+            ar1 = Counter(i)
+            count += 1
+            lst.append(ar1)
+
+    arr = Counter()
+
+    result = []
+    for i in lst:
+        arr += i
+
+    for (key, value) in arr.items():
+        if value == count:
+            result.append(key)
 
     return result
 
